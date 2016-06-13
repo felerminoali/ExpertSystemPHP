@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<people>
+
+	<person age="29">
+		<name>Fred Smith</name>
+		<job>Webmaster</job>
+	</person>
+
+	<person age="31">
+		<name>Patrick Jefferson</name>
+		<job>Chef</job>
+	</person>
+
+</people>

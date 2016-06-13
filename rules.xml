@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RULES>
+    <ALGORITHM>
+        <TYPE>PART</TYPE>
+        <ACCURACY>90</ACCURACY>
+        <RULE>
+            <ID>1</ID>
+            <CONDITIONS>
+                <CONDITION ATTRIBUTE="&#36;N_assign_taken" OPERATOR="&gt;" VAL="2"/>
+                <CONDITION ATTRIBUTE="&#36;N_quiz_taken" OPERATOR="&gt;" VAL="0"/>
+            </CONDITIONS>
+            <CONCLUSION>&#36;finalgrade &#61; PASS&#59;</CONCLUSION>
+            <INTERPRETATION>
+                If students take more than 2 assignments AND take at least 1 quiz
+            </INTERPRETATION>
+        </RULE>
+        <RULE>
+            <ID>2</ID>
+            <CONDITIONS>
+                <CONDITION ATTRIBUTE="&#36;N_assign_fail" OPERATOR="&gt;" VAL="1"/>
+            </CONDITIONS>
+            <CONCLUSION>&#36;finalgrade &#61; FAIL&#59;</CONCLUSION>
+            <INTERPRETATION>
+                If students fails more than 1 assignment(s)
+            </INTERPRETATION>
+        </RULE>
+    </ALGORITHM>
+    
+    <ALGORITHM>
+        <TYPE>CART</TYPE>
+        <ACCURACY>89</ACCURACY>
+        <RULE>
+            <ID>3</ID>
+            <CONDITIONS>
+                <CONDITION ATTRIBUTE="&#36;N_quiz_taken" OPERATOR="&gt;" VAL="2"/>
+            </CONDITIONS>
+            <CONCLUSION>&#36;finalgrade &#61; PASS&#59;</CONCLUSION>
+            <INTERPRETATION>If students take more than 2 quizzes</INTERPRETATION>
+        </RULE>
+    </ALGORITHM>
+</RULES>
